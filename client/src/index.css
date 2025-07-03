@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13.8%, 34.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --border: hsl(214, 32%, 91.2%);
+  --input: hsl(214, 32%, 91.2%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 47%, 11%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(222, 84%, 4.9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(217, 91%, 60%);
+  --radius: 0.5rem;
+  
+
+  --seatwell-50: hsl(214, 100%, 97%);
+  --seatwell-100: hsl(214, 95%, 93%);
+  --seatwell-500: hsl(217, 91%, 60%);
+  --seatwell-600: hsl(221, 83%, 53%);
+  --seatwell-700: hsl(224, 76%, 48%);
+  --seatwell-900: hsl(224, 64%, 33%);
+  
+
+  --sports-gray: hsl(215, 25%, 27%);
+  --sports-light: hsl(220, 14%, 96%);
+  
+
+  --swiss-red: hsl(0, 100%, 50%);
+  --swiss-gray: hsl(0, 0%, 20%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17.5%);
+  --muted-foreground: hsl(215, 20%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17.5%);
+  --input: hsl(217, 32%, 17.5%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 47%, 11%);
+  --secondary: hsl(217, 32%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(217, 91%, 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .seatwell-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+  }
+  
+  .seatwell-secondary {
+    @apply border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white;
+  }
+  
+  .sports-gray {
+    color: var(--sports-gray);
+  }
+  
+  .sports-light {
+    background-color: var(--sports-light);
+  }
+
+  .swiss-flag {
+    background: linear-gradient(45deg, var(--swiss-red) 0%, var(--swiss-red) 100%);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
