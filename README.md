@@ -7,7 +7,7 @@ Please follow these steps to run the project locally:
 ### 1. **Clone the repository**
 ```bash
 git clone https://github.com/Asmi-0123/Seatwell-App-Final.git
-cd seatwell
+cd Seatwell-App-Final
 ```
 
 ### 2. **Install dependencies**
